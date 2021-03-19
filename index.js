@@ -12,3 +12,4 @@ app.use(express.json({limit: '1mb'}));
 app.use(express.urlencoded({extended: false}));
 
 app.use(express.static('public/LandingPage'));
+app.use("/Taimur",express.static('public/TaimurLearningPage'));
