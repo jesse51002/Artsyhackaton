@@ -77,6 +77,10 @@ export class Tools{
         this.cam = getCamera();
 
         let handleToolSelect = (id) =>{
+            if(id === this.tool){
+                return;
+            }
+
             console.log("Selecting the tool " + id);
             this.tool = id;
     

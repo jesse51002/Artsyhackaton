@@ -13,15 +13,13 @@
 }
 
 .Third{
-    flex: 1;
-    width: 15%;
+    width: 27%;
     height: 80%;
-    padding-top: 20%;
+    padding: 20% 0;
 }
 
 .SpecialThird{
-    flex: 1;
-    width: 15%;
+    width: 27%;
     height: 80%;
     padding-top: 15%;
 }
@@ -45,8 +43,16 @@
     color: #FF652F;
 }
 
+.orange:hover{
+    color: white;
+}
+
 .yellow{
     color: #FFE400;
+}
+
+.yellow:hover{
+    color: white;
 }
 
 .A{
@@ -65,4 +71,8 @@
     height: 100%;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.3rem;
+}
+
+.BtnBack:hover{
+    color: #FFE400;
 }

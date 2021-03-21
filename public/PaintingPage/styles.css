@@ -70,6 +70,10 @@
     height: 100%;
 }
 
+.HeaderText:hover{
+    text-decoration: underline;
+}
+
 .MainBody{
     position: absolute;
     top: 50px;
@@ -119,6 +123,10 @@
     
     border: none;
     outline: none;
+}
+
+.ToolNotSelected:hover{
+    background-color: #FFE40045;
 }
 
 .ToolNotSelected{

@@ -17,7 +17,6 @@ function hexToRgb(hex) {
   }
 
 
-
 color.addEventListener('input',() => {
     curColor = [hexToRgb(color.value).r,hexToRgb(color.value).g,hexToRgb(color.value).b , 1];
 });
@@ -38,3 +37,5 @@ export function setColor(newCOlor){
     curColor = newCOlor;
     color.value = rgbToHex(newCOlor[0],newCOlor[1],newCOlor[2]);
 } 
+
+setColor(curColor);
