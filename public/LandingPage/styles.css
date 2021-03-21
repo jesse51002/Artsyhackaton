@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.Holder{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Third{
+    width: 27%;
+    height: 80%;
+    padding: 20% 0;
+}
+
+.SpecialThird{
+    width: 27%;
+    height: 80%;
+    padding-top: 15%;
+}
+
+.imgS{
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    height: auto;
+}
+
+.font{
+    
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.3rem;
+    display: block;
+    text-align: center;
+}
+
+.orange{
+    color: #FF652F;
+}
+
+.orange:hover{
+    color: white;
+}
+
+.yellow{
+    color: #FFE400;
+}
+
+.yellow:hover{
+    color: white;
+}
+
+.A{
+
+    padding-top: 50px;
+    width: 80%;
+    padding-left: 10%;
+    height: 100px;
+}
+.BtnBack{
+    padding-top: 50px;
+    text-align: center;
+    color: #14A76C;
+    width:100%;
+    text-decoration: none;
+    height: 100%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.3rem;
+}
+
+.BtnBack:hover{
+    color: #FFE400;
+}
