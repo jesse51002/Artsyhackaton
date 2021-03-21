@@ -6,29 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
 
+        
+        <script type="module" src="scripts/paintMain.js"></script>
+
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <title>Document</title>
+        <title>Pixel Art Painter</title>
     </head>
 
     <body>
         <header class="PaintHeader">
             <div class="LogoHolder">
                 <a href="/" class= "LogoA">
-                    <img src="" alt="Logo" class="LogoHeaderImg HeaderText">
+                    <img src="./images/RealPxielbrush.png" alt="Logo" class="LogoHeaderImg HeaderText">
                 </a>
             </div>
             
             <div class="OptionsHolder">
                 <div class="NewProjectHolder OptionsDiv">
-                    <a href="" class="NewProjectA HeaderText">
+                    <button id="NewProjHeader" class="NewProjectBtn HeaderText">
                         New Project
-                    </a>
+                    </button>
                 </div>
                 <div class="ExportHolder OptionsDiv">
-                    <a href="" class="ExportA HeaderText">
+                    <button class="ExportBtn HeaderText">
                         Export
-                    </a>
+                    </button>
                 </div>
             </div>
         </header>
@@ -39,41 +42,48 @@
                     Tools
                 </h2>
                 <div class="ToolSelector">
+                    <!-- 
                     <div class="PaintToolDiv">
-                        <a href="" id="PaintTool" class="Tool">
+                        <button id="PaintTool" class="Tool ToolNotSelected">
                             <img src="images/paintbrush.png" alt="Paint Tool" class="ScaleImg">
                         </a>
                     </div>
-
+                    -->
                     <div class="PencilToolDiv">
-                        <a href="" id="PencilTool" class="Tool">
+                        <button id="PencilTool" class="Tool ToolNotSelected">
                             <img src="images/penciltool_.png" alt="Pencil Tool" class="ScaleImg">
                         </a>
                     </div>
-
+                    <!-- 
                     <div class="BucketToolDiv">
-                        <a href="" id="BucketTool" class="Tool">
+                        <button id="BucketTool" class="Tool ToolNotSelected">
                             <img src="images/bucket_.png" alt="Bucket Tool" class="ScaleImg">
                         </a>
                     </div>
-
+                    -->
                     <div class="EraserToolDiv">
-                        <a href="" id="EraserTool" class="Tool">
+                        <button id="EraserTool" class="Tool ToolNotSelected">
                             <img src="images/eraser_.png" alt="Eraser Tool" class="ScaleImg">
                         </a>
                     </div>
 
                     <div class="ColorPickerToolDiv">
-                        <a href="" id="ColorPickerTool" class="Tool">
+                        <button id="ColorPickerTool" class="Tool ToolNotSelected">
                             <img src="images/colorpickertool.png" alt="Color Picker Tool" class="ScaleImg">
                         </a>
                     </div>
                 </div>
+                <!--
                 <h2 class="ToolTitle ToolOptions">
                     Tools Options
                 </h2>
+                 -->
 
-                <div class="PaintToolOptions">
+                <h2 class="ToolTitle">
+                    Colors
+                </h2>
+
+                <div id="PaintToolOptions">
                     <div class="ToolOption">
                         <p>Brush Size</p>
                         <input type="range" min="1" max="100" value="50" class="slider" id="PaintSize">
@@ -86,7 +96,7 @@
                 </div>
 
 
-                <div class="EraserToolOptions">
+                <div id="EraserToolOptions">
                     <div class="ToolOption">
                         <p>Eraser Size</p>
                         <input type="range" min="1" max="100" value="50" class="slider" id="EraserSize">
@@ -100,48 +110,52 @@
                 
                 <div class="ColorPickerHolder">
                     <div id="ColorPicker">
-                    
-                    </div>
-
-                    <div id="Color">
-
+                        <input type='color' id='color'>
                     </div>
                 </div>
                 
 
             </div>
 
-            <div class="PaintDiv">
-
+            <div id="PaintDiv">
+                <canvas id="PaintingCanvas"></canvas>
             </div>
 
         </div>
 
 
-        <div class="NewProjWindow">
+        <div id="NewProjWindow" class="NewProjClose">
 
             <h2 class="NewProjTitle">Create Project</h2>
 
-            <a href="" id="CloseButton">
+            <button  id="NewProjCloseBtn">
                 X
-            </a>
+            </button>
             
             <div class="NewProjTextHolder">
                 <div class="NewProjLabels">
-                    <label for="width" class="ProjLabel">Width: </label><br>
-                    <label for="height" class="ProjLabel">Height: </label>
+                    <label for="newProjWidth" class="ProjLabel">Width: </label><br>
+                    <label for="newProjHeight" class="ProjLabel">Height: </label>
                 </div>
                 <div class="NewProjInputs">
-                    <input type="number" name="width" id="width"> <br>
-                    <input type="number" name="height" id="height">
+                    <input type="number" name="newProjWidth" id="newProjWidth"> <br>
+                    <input type="number" name="newProjHeight" id="newProjHeight">
                 </div>
             </div>
 
-            <button class="ProjAcceptBtn">
+            <button id="ProjAcceptBtn" >
                 Create New
             </button>
 
+            <p id="NewProjErrorMsg"></p>
         </div>
+
+        
+        <script type="module" src="scripts/menus.js"></script>
+        <script type="module" src="scripts/pixel.js"></script>
+        <script type="module" src="scripts/camera.js"></script>
+        <script type="module" src="scripts/ColorPicker.js"></script>
+        <script type="module" src="scripts/tools.js"></script>
 
     </body>
 

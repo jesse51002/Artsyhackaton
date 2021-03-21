@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.Hide{
+    display: none;    
+}
+
 .ScaleImg{
     max-width: 100%;
     height: auto;
@@ -58,6 +62,12 @@
     color: white;
     font-family: 'Press Start 2P', cursive;
     font-size: 0.75rem;
+
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    border: none;
+    outline:none;
+    height: 100%;
 }
 
 .MainBody{
@@ -67,6 +77,7 @@
     width: 100%;
     background-color: #272727;
     display: flex;
+    justify-content: left;
 }
 
 .ToolsDiv{
@@ -76,11 +87,14 @@
     background-color: #FF652F;
 }
 
-.PaintDiv{
+#PaintDiv{
     background-color: #272727;
     height: 100%;
     flex-grow: 1;
+    position:relative;
 }
+
+
 
 .ToolTitle{
     text-align: center;
@@ -101,6 +115,18 @@
 .Tool{
     width: 100%;
     height: 100%;
+    display: block;
+    
+    border: none;
+    outline: none;
+}
+
+.ToolNotSelected{
+    background-color: rgba(0,0,0,0);
+}
+
+.ToolSelected{
+    background-color: rgba(255,228,0,0.5);
 }
 
 .ToolOption{
@@ -150,8 +176,11 @@
     cursor: pointer;
 }
 
-.PaintToolOptions{
-      display: none;
+#PaintToolOptions{
+    display: none;
+}
+#EraserToolOptions{
+    display: none;
 }
 
 .ColorPickerHolder{
@@ -161,21 +190,18 @@
 }
 
 #ColorPicker{
-    height: 100px;
-    width: 100%;
-    border: 5px solid #272727; 
-}
-
-#Color{
-    margin-top: 10px;
-    width: 100%;
     height: 30px;
-    border: 5px solid #272727;
+    width: 100%;
+}
+
+#color{
+    width: 70%;
+    margin: 0 15%;
 }
 
 
-.NewProjWindow{
-    display: block;
+
+#NewProjWindow{
     top:50%;
     left: 50%;
     transform: translate(-170px, -90px);
@@ -184,6 +210,14 @@
 
     background-color: #FF652F;
     border: 10px solid black;
+}
+
+.NewProjOpen{
+    display: block;
+}
+
+.NewProjClose{
+    display: none;
 }
 
 .NewProjTitle{
@@ -195,7 +229,7 @@
     font-size: 1.2rem;
 }
 
-#CloseButton{
+#NewProjCloseBtn{
     text-decoration: none;
     color: red;
 
@@ -208,6 +242,11 @@
     text-align: right;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.4rem;
+
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
 
 .NewProjTextHolder{
@@ -234,10 +273,20 @@
     
 }
 
-.ProjAcceptBtn{
+#ProjAcceptBtn{
     display: block;
     margin: 20px auto;
     width: 120px;
     height: 40px;
     background-color: #FFE400;
+}
+
+#NewProjErrorMsg{
+    display: block;
+    text-align: center;
+    color: yellow;
+    text-decoration: underline;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
 }
