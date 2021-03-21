@@ -207,7 +207,16 @@
     margin: 0 15%;
 }
 
-
+.HelpHolder{
+    padding-top: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.4rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+}
 
 #NewProjWindow{
     top:50%;
