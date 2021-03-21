@@ -21,8 +21,8 @@ var createNewProjPressed =function(id){
 
     let errorMsg = document.getElementById("NewProjErrorMsg");
 
-    if(width> 2000 || height > 2000 || width < 1 || height < 1){
-        errorMsg.innerText = "The width and height must be in between 1 - 2000";
+    if(width> 50 || height > 50 || width < 1 || height < 1){
+        errorMsg.innerText = "The width and height must be in between 1 - 50";
     }
     else{
         errorMsg.innerText = "";
